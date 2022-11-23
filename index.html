@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Time Atrás da Bola</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+	
+		<header>
+			<div class="container">
+				<h2 class="titulo">Atrás da Bola</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Ficha dos Atletas</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do atleta">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Altura(m)</th>
+							<th>Peso(kg)</th>
+							<th>Idade:</th>
+							<th>Posição:</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-atletas">
+						<tr class="atleta" >
+							<td class="info-nome">Adrian</td>
+							<td class="info-altura">1.89</td>
+							<td class="info-peso">87kg</td>
+							<td class="info-idade">28</td>
+							<td class="info-posição">Ponta</td>
+
+						<tr class="atleta" >
+							<td class="info-nome">Jéssica</td>
+							<td class="info-altura">1.69</td>
+							<td class="info-peso">60kg</td>
+							<td class="info-idade">19</td>
+							<td class="info-posição">Central</td>
+						</tr>
+
+						<tr class="atleta" >
+							<td class="info-nome">Roberto</td>
+							<td class="info-altura">1,92</td>
+							<td class="info-peso">94kg</td>
+							<td class="info-idade">35</td>
+							<td class="info-posição">Oposto</td>
+						</tr>
+
+						<tr class="atleta" >
+							<td class="info-nome">Isabele</td>
+							<td class="info-altura">1.75</td>
+							<td class="info-peso">67</td>
+							<td class="info-idade">25</td>
+							<td class="info-posição">Levantador</td>
+						</tr>
+						<tr class="atleta" >
+							<td class="info-nome">Claudio</td>
+							<td class="info-altura">1.66</td>
+							<td class="info-peso">74</td>
+							<td class="info-idade">32</td>
+							<td class="info-posição">Libero</td>
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar o atleta</span>
+
+				<button id="buscar-atletas" class="botao bto-principal">Buscar Atletas</button>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo atleta</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do atleta" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="altura">Altura:</label>
+		            <input id="altura" name="peso" type="text" placeholder="digite a altura do atleta" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="peso">Peso:</label>
+		            <input id="peso" name="altura" type="text" placeholder="digite o peso do atleta" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="idade">Idade:</label>
+		            <input id="idade" type="text" placeholder="digite a idade do atleta" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-atleta" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+
+		<script src="js/calcula-posição.js" ></script>
+		<script src="js/form.js" ></script>
+		<script src="js/remover-atletas.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-atletas.js" ></script>
+
+	</body>
+</html>
